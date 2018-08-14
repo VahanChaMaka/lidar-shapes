@@ -1,6 +1,6 @@
 # Pattern recognition in 3D point clouds using 2D lidar
 
-This project is my master's thesis, successfully defended in 2017. Full text with detailed charts, images, algorythms and dataflow diagrams is attached, but only in Russian.
+This project is my master's thesis, successfully defended in 2017 on the highest mark. Full text with detailed charts, images, algorythms and dataflow diagrams is attached, but only in Russian.
 
 ## General idea
 Let's assume that we have 2D lidar, which allows to get distance to obstacles only in one plane, but we want to make full 3D point cloud. This goal can be achieved if we perform scan in one plane, then turn lidar a little and perform another scan, and so on. As a result we will get an array of values in spherical coordinate system, each value represents distance to obstacle with two angles between the obstacle and center of lidar and horizon respectfully. We can see something like that:
@@ -24,3 +24,11 @@ Example:
 Figures on the same image but on the different distance range (defferent values of thershold on the segmentation step):  
 ![Foreground objects](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_near.jpg)  
 ![Background object](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_far.jpg)  
+
+##Design details
+
+This system consists of four parts:
+1. PC with main program. It collects data from lidar, coordinate it movement, processes point clouds and performs patterns recognition. This program is written in LabView.
+2. Stepper motor with driver and mechanical parts. 
+3. Lidar. It connected directly to the PC and installed in the holder on the motor shaft.
+4. Motor controller. It recieves commands from PC and transforms to signals to the driver, made of Arduino plate.
