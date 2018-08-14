@@ -7,9 +7,9 @@ Let's assume that we have 2D lidar, which allows to get distance to obstacles on
 ![Point cloud](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/point_cloud.jpg)
 This image is shifted a little to reveal volume. Each yellow dot is a single lidar measurement.
 
-As a raw point cloud this information is not very valuable. What could be extracted from it? We can try to find some patterns, basic geometric shapes, for example.Raw point cloud is converted to a monochrome image (depth map) by projection to a plane, where intensity of each pixel represents distance to an obstacle. 
+As a raw point cloud this information is not very valuable. What could be extracted from it? We can try to find some patterns, basic geometric shapes, for example.Raw point cloud is converted to a monochrome image (depth map) by projection to a plane, where intensity of each pixel represents distance to an obstacle.  
 ![Depth map](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/depth_map.jpg)
-![Another depth map](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/depth_map2.jpg)
+![Another depth map](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/depth_map2.jpg)  
 
 Then we can apply any pattern recognition algorythm. I used the next steps to discover basic shapes:
 1. Segmentation of the image by applying pixel intensity thresholds. It produces binary images. Because intensity represents distance to an obstacle, we can select objects in foreground or background changing thresholds.
@@ -18,9 +18,9 @@ Then we can apply any pattern recognition algorythm. I used the next steps to di
 4. Discovering shapes by representing edges in Freeman chain code and calculating compactness measure of a shape.
 Result is coordinates of a center and radius for circles, coordinates of corners for a rectangle. 
 
-Example:
-![Result](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures.jpg)
+Example:  
+![Result](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures.jpg)  
 
-Figures on the same image but on the different distance range (defferent values of thershold on the segmentation step):
-![Foreground objects](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_near.jpg)
-![Background object](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_far.jpg)
+Figures on the same image but on the different distance range (defferent values of thershold on the segmentation step):  
+![Foreground objects](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_near.jpg)  
+![Background object](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_far.jpg)  
