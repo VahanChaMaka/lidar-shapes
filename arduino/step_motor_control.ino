@@ -4,11 +4,11 @@
  const int MOVE_TO_ZERO_CODE = 241;
 
  //PIN description 
- int _stepP = 2;
- int _stepM = 3;
- int _dirP = 4;
- int _dirM = 5;
- int _button = 8;
+ int _stepP = 2; //"Step+"
+ int _stepM = 3; //"Step-"
+ int _dirP = 4; //"Dir+"
+ int _dirM = 5; //"Dir-"
+ int _button = 8; //to calibration (stop) sensor
  
  int speed = 0;
  int divider = 4;
@@ -40,8 +40,8 @@ void setup() {
   pinMode(_stepP, OUTPUT);
   pinMode(_stepM, OUTPUT);
   digitalWrite(_stepM, LOW);
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT); //to "Enb+"
+  pinMode(7, OUTPUT); //to "Enb-"
   digitalWrite(6, LOW); //motor enabled
   digitalWrite(7, LOW); //motor enabled
   pinMode(_button, INPUT);
