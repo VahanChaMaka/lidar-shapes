@@ -1,0 +1,1 @@
+For proper work you should download additional LabView files for lidar Hokuyo URG-04LX_UG01 from https://forums.ni.com/t5/Example-Programs/Using-LabVIEW-and-the-Hokuyo-URG-04LX-UG01-Laser-Range-Finder/ta-p/3516667
