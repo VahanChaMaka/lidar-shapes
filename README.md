@@ -25,10 +25,10 @@ Figures on the same image but on the different distance range (defferent values 
 ![Foreground objects](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_near.jpg)  
 ![Background object](https://github.com/VahanChaMaka/lidar-shapes/blob/master/samples/figures2_far.jpg)  
 
-##Design details
+## Design details
 
 This system consists of four parts:
-1. PC with main program. It collects data from lidar, coordinate it movement, processes point clouds and performs patterns recognition. This program is written in LabView.
+1. PC with main program. It collects data from lidar, coordinate it movement, processes point clouds and performs patterns recognition. This program is written in LabView. PC connects with motor controller via UART.
 2. Stepper motor with driver and mechanical parts. 
 3. Lidar. It connected directly to the PC and installed in the holder on the motor shaft.
 4. Motor controller. It recieves commands from PC and transforms to signals to the driver, made of Arduino plate.
